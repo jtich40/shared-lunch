@@ -1,7 +1,7 @@
-const Sequ = require('sequelize');
+const sequelize = require('sequelize');
 require('dotenv').config();
 
-const sequelize = new Sequ(
+const sequelize = new sequelize(
     process.env.DB_NAME,
      process.env.DB_USER, 
      process.env.DB_PASS, {
