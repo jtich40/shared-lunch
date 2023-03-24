@@ -7,7 +7,7 @@ class User extends Model {
     checkPassword(loginPw) {
         return bcrypt.compareSync(loginPw, this.password);
     }
-    }
+}
 
 User.init( // Create a new class called User that extends the functionality of Sequelize's Model class
     {
@@ -28,33 +28,35 @@ User.init( // Create a new class called User that extends the functionality of S
             allowNull: false,
             unique: true,
         },
-        //define 
+        //define a name column
         name: {
             type: DataTypes.STRING,
             allowNull: true,
         },
-    
+
         // define a password column
         password: {
             type: DataTypes.STRING,
             allowNull: false,
-           }
-           
-
-        },
-        {
-            hooks: {
-                // set up beforeCreate lifecycle "hook" functionality
-                beforecreate: async (newUserData) => {
-                    newUserData.password = await bcrypt.hash(newUserData.password, 10);
-                    return newUserData;
-                }
-            },
-
         }
-        );
 
 
+    },
+    {
+        hooks: {
+            // set up beforeCreate lifecycle "hook" functionality
+            beforeCreate: async (newUserData) => {
+                newUserData.password = await bcrypt.hash(newUserData.password, 10);
+                return newUserData;
+            }
+        },
+        sequelize,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'user'
+
+    }
+);
 
 module.exports = User;
-    
+
