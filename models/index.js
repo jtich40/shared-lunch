@@ -1,4 +1,3 @@
-const sequelize = require('./config/connection'); // Import the connection to the database
 const User = require('./user');
 const Post = require('./post');
 
