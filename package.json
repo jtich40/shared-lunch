@@ -1,30 +1,32 @@
 {
-"name": "resteraunt-foodbank-app",
-"version": "1.0.0",
-"description": "",
-"main": "server.js",
-"scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "start": "nodemon server.js",
-  "seed": "node seeds/seed.js"
-},
-"keywords": [],
-"author": "",
-"license": "ISC",
-"dependencies": {
-  "bcrypt": "^5.1.0",
-  "connect-session-sequelize": "^7.0.4",
-  "dotenv": "^8.2.0",
-  "express": "^4.17.1",
-  "express-handlebars": "^5.2.0",
-  "express-session": "^1.17.3",
-  "mysql2": "^2.2.5",
-  "sequelize": "^6.3.5"
-},
-"devDependencies": {
-  "eslint": "^7.12.1",
-  "eslint-config-prettier": "^6.15.0",
-  "nodemon": "^2.0.21",
-  "prettier": "^2.1.2"
-}
+  "name": "resteraunt-foodbank-app",
+  "version": "1.0.0",
+  "description": "This full-stack app provides a solution for global food resource waste by allowing food banks and restaurants to easily communicate their needs and food surplus in order to schedule donations.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "seed": "node seeds/seed.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-session-sequelize": "^7.1.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.2",
+    "express-session": "^1.17.3",
+    "handlebars": "^4.7.7",
+    "handlebars-helpers": "^0.10.0",
+    "mysql2": "^3.2.0",
+    "sequelize": "^6.30.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "nodemon": "^2.0.21",
+    "prettier": "^2.1.2"
+  }
 }
