@@ -158,7 +158,7 @@ background-image: url("https://user-images.githubusercontent.com/118077000/22826
     width: 100%;
     height: 100%;
     background-color: rgb(167, 215, 197);
-    background-image: url("Assets/img/carrot\ jpeg.jpg");
+    /* background-image: url("Assets/img/carrot\ jpeg.jpg"); */
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: 300%;
