@@ -20,7 +20,7 @@ router.post('/login', (req, res) => {
   }).then((dbUserData) => {
     // If no data exists that means the associated user does not exist at all, return error
     if (!dbUserData) {
-      res.status(400).json({ message: 'No user with that email address!' });
+      res.status(400).json({ message: 'No user Found!' });
       return;
     }
 
@@ -54,7 +54,7 @@ router.post('/logout', (req, res) => {
 });
 
 // send new user info to server
-router.post('/signup', async (req, res) => {
+router.post('/', async (req, res) => {
     try {
         const dbUserData = await User.create({
             name: req.body.name,

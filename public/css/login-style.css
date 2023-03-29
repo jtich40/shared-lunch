@@ -1,30 +1,29 @@
 /* Bootstrap css */
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
-
 body{
-	font-family: 'Poppins', sans-serif;
-	font-weight: 300;
-	font-size: 15px;
-	line-height: 1.7;
-	color: #c4c3ca;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #C4C3CA;
     background-color: rgb(249, 248, 235);
     /* background-image: url("/assets/dose-juice-sTPy-oeA3h0-unsplash.gif"); */
 /* margin: 0%; */
-	overflow-x: hidden;
+  overflow-x: hidden;
     /* background-blend-mode: darken; */
     /* background-repeat: no-repeat;
     background-size: cover;
     background-attachment: local; */
 }
 a {
-	cursor: pointer;
+  cursor: pointer;
   transition: all 200ms linear;
 }
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 .link {
-  color: #c4c3ca;
+  color: #C4C3CA;
 }
 .link:hover {
   color: rgb(167, 215, 197);
@@ -35,7 +34,7 @@ p {
   line-height: 1.7;
 }
 h4 {
-    color: rgb(249, 248, 235);
+    color: white;
   font-weight: 600;
 }
 h6 span{
@@ -44,7 +43,6 @@ h6 span{
   font-weight: 700;
 }
 img {
-
   resize: 100%;
 display: block;
 justify-content: center;
@@ -54,16 +52,12 @@ align-items: center;
   height: auto;
   max-width: auto;
   /* margin: 80%; */
-
 }
 /* .card {
 background-image: url("https://user-images.githubusercontent.com/118077000/228269037-31712295-5b84-41cc-88e7-1e9311412c51.png");
-
-
 } */
 /* .card-content {
   background-repeat: no-repeat;
-
 } */
 .section{
   position: relative;
@@ -99,7 +93,7 @@ background-image: url("https://user-images.githubusercontent.com/118077000/22826
   height: 36px;
   border-radius: 50%;
   color: rgb(167, 215, 197);
-  background-color: #102770;
+  background-color:  rgb(92, 141, 137);
   font-family: 'unicons';
   content: '\eb4f';
   z-index: 20;
@@ -113,8 +107,6 @@ background-image: url("https://user-images.githubusercontent.com/118077000/22826
 .checkbox:checked + label:before {
   transform: translateX(44px) rotate(-270deg);
 }
-
-
 .card-3d-wrap {
   position: relative;
   width: 440px;
@@ -128,21 +120,21 @@ background-image: url("https://user-images.githubusercontent.com/118077000/22826
 .card-3d-wrapper {
   width: 100%;
   height: 100%;
-  position:absolute;    
+  position:absolute;
   top: 0;
-  left: 0;  
+  left: 0;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  transition: all 600ms ease-out; 
+  transition: all 600ms ease-out;
 }
 .card-front {
   width: 100%;
   height: 100%;
   background-color: rgb(92, 141, 137);
-  /* background-image: url("/public/assets/fruit-and-vegetable-photography.webp"); */
-  background-position: bottom center;
+  background-image: url('https://user-images.githubusercontent.com/118077000/228269037-31712295-5b84-41cc-88e7-1e9311412c51.png');
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 300%;
+  background-size: 135%;
   position: absolute;
   border-radius: 6px;
   left: 0;
@@ -158,10 +150,10 @@ background-image: url("https://user-images.githubusercontent.com/118077000/22826
     width: 100%;
     height: 100%;
     background-color: rgb(167, 215, 197);
-    /* background-image: url("Assets/img/carrot\ jpeg.jpg"); */
-    background-position: bottom center;
+    background-image: url('https://user-images.githubusercontent.com/118077000/228269037-31712295-5b84-41cc-88e7-1e9311412c51.png');
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 300%;
+    background-size: 135%;
     position: absolute;
     border-radius: 6px;
     left: 0;
@@ -174,7 +166,6 @@ background-image: url("https://user-images.githubusercontent.com/118077000/22826
     backface-visibility: hidden;
     transform: rotateY(180deg);
   }
-
 .checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
   transform: rotateY(180deg);
 }
@@ -188,9 +179,7 @@ background-image: url("https://user-images.githubusercontent.com/118077000/22826
   z-index: 20;
   display: block;
 }
-
-
-.form-group{ 
+.form-group{
   position: relative;
   display: block;
     margin: 0;
@@ -207,8 +196,8 @@ background-image: url("https://user-images.githubusercontent.com/118077000/22826
   line-height: 22px;
   letter-spacing: 0.5px;
   outline: none;
-  color: #c4c3ca;
-  background-color: #1f2029;
+  color: #C4C3CA;
+  background-color: #1F2029;
   border: none;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
@@ -232,27 +221,26 @@ background-image: url("https://user-images.githubusercontent.com/118077000/22826
   -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
-
 .form-group input:-ms-input-placeholder  {
-  color: #c4c3ca;
+  color: #C4C3CA;
   opacity: 0.7;
   -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
 .form-group input::-moz-placeholder  {
-  color: #c4c3ca;
+  color: #C4C3CA;
   opacity: 0.7;
   -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
 .form-group input:-moz-placeholder  {
-  color: #c4c3ca;
+  color: #C4C3CA;
   opacity: 0.7;
   -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
 .form-group input::-webkit-input-placeholder  {
-  color: #c4c3ca;
+  color: #C4C3CA;
   opacity: 0.7;
   -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
@@ -277,8 +265,7 @@ background-image: url("https://user-images.githubusercontent.com/118077000/22826
   -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
-
-.btn{  
+.btn{
   border-radius: 4px;
   height: 44px;
   font-size: 13px;
@@ -307,32 +294,28 @@ background-image: url("https://user-images.githubusercontent.com/118077000/22826
   box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
 }
 .btn:active,
-.btn:focus{  
+.btn:focus{
   background-color: rgb(92, 141, 137);
   color: rgb(167, 215, 197);
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
-.btn:hover{  
+.btn:hover{
   background-color: rgb(249, 248, 235);
   color: rgb(92, 141, 137);
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
-
-
-
-
 .logo {
-	position: absolute;
-	top: 30px;
-	right: 30px;
-	display: block;
-	z-index: 100;
-	transition: all 250ms linear;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: block;
+  z-index: 100;
+  transition: all 250ms linear;
 }
 .logo img {
-	height: 26px;
-	width: auto;
-	display: block;
+  height: 26px;
+  width: auto;
+  display: block;
 }
   
   
