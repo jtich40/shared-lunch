@@ -1,55 +1,51 @@
-{{!-- <!-- background image -->
-    <div class="card" id="set-img">
-        <div class="row full-height justify-content-center">
-        <div class="card-content"><img src="https://user-images.githubusercontent.com/118077000/228269037-31712295-5b84-41cc-88e7-1e9311412c51.png"></img>
-        </div>
-    </div>
-</div> --}}
-<!-- Login Card -->
 <div class="section">
-        <div class="container">
-            <div class="row full-height justify-content-center">
-                <div class="col-12 text-center align-self-center py-5">
-                    <div class="section pb-5 pt-5 pt-sm-2 text-center">
-                        <h6 class="mb-0 pb-3"><span>Login</span><span>Sign Up</span></h6>
-                        <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
-                        <label for="reg-log"></label>
-                        <div class="card-3d-wrap mx-auto">
-                            <div class="card-3d-wrapper">
-                                <div class="card-front">
-                                    <div class="center-wrap">
-                                        <div class="section text-center">
-                                            <h4 class="mb-4 pb-3">Lettuce Login!</h4>
-                                            <div class="form-group">
-                                                <input type="email" name="logemail" class="form-style" placeholder="Username" id="user-name" autocomplete="off">
-                                                <i class="input-icon uil uil-at"></i>
-                                            </div>
-                                            <div class="form-group mt-2">
-                                                <input type="password" name="logpass" class="form-style" placeholder="Password" id="user-password" autocomplete="off">
-                                                <i class="input-icon uil uil-lock-alt"></i>
-                                            </div>
-                                            <button class="btn mt-4" id="login-form">Submit</button>
+    <div class="container">
+        <div class="row full-height justify-content-center">
+            <div class="col-12 text-center align-self-center py-5">
+                <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                    <h6 class="mb-0 pb-3"><span>Login</span><span>Sign Up</span></h6>
+                    <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
+                    <label for="reg-log"></label>
+                    <div class="card-3d-wrap mx-auto">
+                        <div class="card-3d-wrapper">
+                            <div class="card-front">
+                                <div class="center-wrap">
+                                    <div class="section text-center">
+                                        <h4 class="mb-4 pb-3">Lettuce Login!</h4>
+                                        <div class="form-group">
+                                            <input type="text" class="form-style"
+                                                placeholder="Username" id="user-name" autocomplete="off">
+                                            <i class="input-icon uil uil-at"></i>
                                         </div>
+                                        <div class="form-group mt-2">
+                                            <input type="password" class="form-style"
+                                                placeholder="Password" id="user-password" autocomplete="off">
+                                            <i class="input-icon uil uil-lock-alt"></i>
+                                        </div>
+                                        <button class="btn mt-4" id="login-form">Submit</button>
                                     </div>
                                 </div>
-                                <div class="card-back">
-                                    <div class="center-wrap">
-                                        <div class="section text-center">
-                                            <h4 class="mb-4 pb-3">Lettuce Sign Up!</h4>
-                                            <div class="form-group">
-                                                <input type="text" class="form-style" placeholder="Provider Name" id="" autocomplete="off">
-                                                <i class="input-icon uil uil-user"></i>
-                                            </div>
-                                            <div class="form-group mt-2">
-                                                <input type="text" class="form-style" placeholder="Username" id="username-signup" autocomplete="off">
-                                                <i class="input-icon uil uil-at"></i>
-                                            </div>
-                                            <div class="form-group mt-2">
-                                                <input type="password" class="form-style" placeholder="Password" id="password-signup" autocomplete="off">
-                                                <i class="input-icon uil uil-lock-alt"></i>
-                                            </div>
-                                            <button class="btn mt-4 signup-form">Submit</button>
+                            </div>
+                            <div class="card-back">
+                                <div class="center-wrap">
+                                    <div class="section text-center">
+                                        <h4 class="mb-4 pb-3">Lettuce Sign Up!</h4>
+                                        <div class="form-group">
+                                            <input type="text" class="form-style" placeholder="Provider Name" id="provider-signup"
+                                                autocomplete="off">
+                                            <i class="input-icon uil uil-user"></i>
                                         </div>
+                                        <div class="form-group mt-2">
+                                            <input type="text" class="form-style" placeholder="Username"
+                                                id="username-signup" autocomplete="off">
+                                            <i class="input-icon uil uil-at"></i>
+                                        </div>
+                                        <div class="form-group mt-2">
+                                            <input type="password" class="form-style" placeholder="Password"
+                                                id="password-signup" autocomplete="off">
+                                            <i class="input-icon uil uil-lock-alt"></i>
+                                        </div>
+                                        <button class="btn mt-4" id="signup-form">Submit</button>
                                     </div>
                                 </div>
                             </div>
@@ -58,3 +54,6 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<script src="/js/login.js"></script>

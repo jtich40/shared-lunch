@@ -5,19 +5,20 @@
         <button class="btn outline"><a href="/new-post">Add Blog</a></button>
         <h1>{{user.name}}, checkout your posts...</h1>
 
-        {{#each posts as |post|}}
-        <div class="card-container">
-            <div class="wrapper">
-                 {{!-- title of blog  --}}
-                <p>{{post.title}}</p>
-                {{!-- Food provider name --}}
-                <p>{{post.name}}<br/></p>
-                {{!-- contact info --}}
-                <p>{{post.description}}<br/></p>
-                {{!-- food description --}}
-                <p>{{post.content}}<br/></p>
-            </div>
-        </div>
-        {{/each}}
+		{{#each blogPosts as |post|}}
+		<div class="card-container">
+			<div class="wrapper">
+				{{!-- title of blog --}}
+				<p>{{post.title}}</p>
+				{{!-- Food provider name --}}
+				<p>{{user.name}}<br/></p>
+				{{!-- contact info --}}
+				<p>{{post.description}}<br/></p>
+				{{!-- description --}}
+				<p>{{post.content}}<br/></p>
+			</div>
+		</div>
+		{{/each}}
     </div>
 </div>
+

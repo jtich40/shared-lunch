@@ -13,9 +13,9 @@ router.get('/login', (req, res) => {
 
 // send login info to server
 router.post('/login', (req, res) => {
-  User.findOne({
+  const dbUserData = User.findOne({
     where: {
-      email: req.body.email,
+      username: req.body.username,
     },
   }).then((dbUserData) => {
     // If no data exists that means the associated user does not exist at all, return error
@@ -36,7 +36,7 @@ router.post('/login', (req, res) => {
   req.session.save(() => {
     req.session.user_id = dbUserData.id;
     req.session.username = dbUserData.username;
-    req.session.loggedIn = true;
+    req.session.logged_in = true;
     res.json({ user: dbUserData, message: 'You are now logged in!' });
   });
 });
@@ -44,7 +44,7 @@ router.post('/login', (req, res) => {
 
 // Terminate sessions and redirect to main page
 router.post('/logout', (req, res) => {
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     req.session.destroy(() => {
       res.status(204).end();
     });
@@ -64,7 +64,8 @@ router.post('/', async (req, res) => {
         req.session.save(() => {
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
-            req.session.loggedIn = true;
+            req.session.logged_in = true;
+            req.session.name = dbUserData.name;
             res.status(200).json(dbUserData);
         });
     } catch (err) {
