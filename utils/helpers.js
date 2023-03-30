@@ -1,5 +1,7 @@
-const Handlebars = require('handlebars');
+const moment = require('moment');
 
-Handlebars.registerHelper('eq', function(value1, value2, options) {
-    return value1 === value2 ? options.fn(this) : options.inverse(this);
-  });
+module.exports = {
+  formatDate: (date) => {
+    return moment(date).format('MMMM D, YYYY');
+  }
+}

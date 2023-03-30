@@ -28,40 +28,39 @@ sequelize.sync({ force: true })
       const post1 = {
         name: 'Gandalf\'s Grocery',
         contact: 'Christopher Lee',
-        content: 'Day old sourdough and extra eggs. Please call 000-000-0000',
+        content: 'Day old sourdough and extra eggs. Please call 154-059-1818',
         user_id: user.id
       };
       const post2 = {
         name: 'Ministry of Silly Drinks',
         contact: 'John Cleese',
-        content: 'Day old pastries. Please call 000-000-0000',
+        content: 'Day old pastries. Please call 415-370-9623',
         user_id: user.id
       };
       const post3 = {
         name: 'Deadpool\'s Deli',
         contact: 'Logan',
-        content: 'Extra Pastrami. Please call 000-000-0000',
+        content: 'Extra Pastrami. Please call 509-476-4403',
         user_id: user.id
       };
       const post4 = {
         name: 'C.R.E.A.M.(ERY)',
         contact: 'Russell Jones',
-        content: 'Extra ice cream. Please call 000-000-0000',
+        content: 'Extra ice cream. Please call 402-954-2930',
         user_id: user.id
       };
       const post5 = {
         name: 'Cthulhu\'s Cakes',
         contact: 'Francis Wayland Thurston',
-        content: 'We have too extra pies leftover. Please call 000-000-0000',
+        content: 'We have extra pies leftover. Please call 517-861-9194',
         user_id: user.id
       };
       const post6 = {
         name: 'Bjork\s Medieval Fun Time Emporium',
         contact: 'Bjork',
-        content: 'We have some left over turkety legs. Please call 000-000-0000',
+        content: 'We have extra turkey legs. Please call 430-792-4765',
         user_id: user.id
       };
-
       // Use Promise.all to wait for all posts to be created before bulk creating them
       const postPromises = [
         Post.findOrCreate({ where: { name: post1.name }, defaults: post1 }),
@@ -71,7 +70,6 @@ sequelize.sync({ force: true })
         Post.findOrCreate({ where: { name: post5.name }, defaults: post5 }),
         Post.findOrCreate({ where: { name: post6.name }, defaults: post6 })
       ];
-
       Promise.all(postPromises)
         .then((createdPosts) => {
           createdPosts.forEach(([post, created]) => {
