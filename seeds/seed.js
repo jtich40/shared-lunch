@@ -5,17 +5,14 @@ const users = [
   {
     username: 'john_doe',
     password: 'password123',
-    name: 'John Doe'
   },
   {
     username: 'jane_doe',
     password: 'password456',
-    name: 'Jane Doe'
   },
   {
     username: 'jim_smith',
     password: 'password789',
-    name: 'Jim Smith'
   }
 ];
 sequelize.sync({ force: true })
@@ -29,15 +26,15 @@ sequelize.sync({ force: true })
     const posts = [];
     users.forEach((user) => {
       const post1 = {
-        title: 'My First Blog Post',
-        name: user.name,
+        name: 'My First Blog Post',
+        contact: 'John Doe',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         user_id: user.id
       };
       const post2 = {
-        title: 'My Second Blog Post',
-        name: user.name,
-        content: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        name: 'My First Blog Post',
+        contact: 'Jane Doe',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         user_id: user.id
       };
       posts.push(post1, post2);

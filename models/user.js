@@ -13,7 +13,6 @@ User.init( // Create a new class called User that extends the functionality of S
     {
         // define an id column
         id: {
-            
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
@@ -25,12 +24,6 @@ User.init( // Create a new class called User that extends the functionality of S
             allowNull: false,
             unique: true,
         },
-        //define a name column
-        name: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
-
         // define a password column
         password: {
             type: DataTypes.STRING,
