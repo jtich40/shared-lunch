@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection'); // Import the connection to the database
-const { User, Post,} = require('../models'); // Import the models
+const { User, Post } = require('../models'); // Import the models
 // Create users
 const users = [
   {
@@ -26,18 +26,60 @@ sequelize.sync({ force: true })
     const posts = [];
     users.forEach((user) => {
       const post1 = {
-        name: 'My First Blog Post',
-        contact: 'John Doe',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        name: 'Gandalf\'s Grocery',
+        contact: 'Christopher Lee',
+        content: 'Day old sourdough and extra eggs. Please call 000-000-0000',
         user_id: user.id
       };
       const post2 = {
-        name: 'My First Blog Post',
-        contact: 'Jane Doe',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        name: 'Ministry of Silly Drinks',
+        contact: 'John Cleese',
+        content: 'Day old pastries. Please call 000-000-0000',
         user_id: user.id
       };
-      posts.push(post1, post2);
+      const post3 = {
+        name: 'Deadpool\'s Deli',
+        contact: 'Logan',
+        content: 'Extra Pastrami. Please call 000-000-0000',
+        user_id: user.id
+      };
+      const post4 = {
+        name: 'C.R.E.A.M.(ERY)',
+        contact: 'Russell Jones',
+        content: 'Extra ice cream. Please call 000-000-0000',
+        user_id: user.id
+      };
+      const post5 = {
+        name: 'Cthulhu\'s Cakes',
+        contact: 'Francis Wayland Thurston',
+        content: 'We have too extra pies leftover. Please call 000-000-0000',
+        user_id: user.id
+      };
+      const post6 = {
+        name: 'Bjork\s Medieval Fun Time Emporium',
+        contact: 'Bjork',
+        content: 'We have some left over turkety legs. Please call 000-000-0000',
+        user_id: user.id
+      };
+
+      // Use Promise.all to wait for all posts to be created before bulk creating them
+      const postPromises = [
+        Post.findOrCreate({ where: { name: post1.name }, defaults: post1 }),
+        Post.findOrCreate({ where: { name: post2.name }, defaults: post2 }),
+        Post.findOrCreate({ where: { name: post3.name }, defaults: post3 }),
+        Post.findOrCreate({ where: { name: post4.name }, defaults: post4 }),
+        Post.findOrCreate({ where: { name: post5.name }, defaults: post5 }),
+        Post.findOrCreate({ where: { name: post6.name }, defaults: post6 })
+      ];
+
+      Promise.all(postPromises)
+        .then((createdPosts) => {
+          createdPosts.forEach(([post, created]) => {
+            if (created) {
+              posts.push(post);
+            }
+          });
+        });
     });
     return Post.bulkCreate(posts);
-  })
+  });
