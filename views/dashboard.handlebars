@@ -8,14 +8,12 @@
 		{{#each blogPosts as |post|}}
 		<div class="card-container">
 			<div class="wrapper">
-				{{!-- title of blog --}}
-				<p>{{post.title}}</p>
-				{{!-- Food provider name --}}
-				<p>{{user.name}}<br/></p>
-				{{!-- contact info --}}
-				{{!-- <p>{{post.description}}<br/></p> --}}
-				{{!-- description --}}
+			{{!-- Food provider name --}}
+				<p>{{post.name}}</p>
+				{{!-- Food Info--}}
 				<p>{{post.content}}<br/></p>
+				{{!-- contact info --}}
+				<p>{{post.contact}}<br/></p>
 			</div>
 		</div>
 		{{/each}}

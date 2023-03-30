@@ -2,21 +2,19 @@
 <div class="card-container">
     <div class="wrapper">
     {{#if logged_in}}
-        <h1>Welcome, {{user.name}}</h1>
+        <h1>Welcome, {{user.username}}</h1>
     {{else}}
         <h2>Checkout the grub!</h2>
     {{/if}}
         {{#each blogPosts as |post|}}
         <div class="card-container" id="card-color">
             <div id="card-color">
-                {{!-- title of blog --}}
-                <h1 id="name-color">{{post.title}}</h1>
-                {{!-- Food provider name --}}
-                <p>{{user.name}}<br/></p>
-                {{!-- contact info --}}
-                {{!-- <p>{{post.description}}<br/></p> --}}
-                {{!-- description --}}
+                {{!-- Provider Name --}}
+                <h1 id="name-color">{{post.name}}</h1>
+                {{!-- Food info --}}
                 <p>{{post.content}}<br/></p>
+                {{!-- provider contact --}}
+                <p>{{post.contact}}<br/></p>
             </div>
         </div>
         {{/each}}

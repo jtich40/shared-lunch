@@ -1,4 +1,4 @@
-const {Model, DataTypes} = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Post extends Model {
@@ -12,7 +12,11 @@ Post.init(
             primaryKey: true,
             autoIncrement: true
         },
-        title: {
+        name: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        contact: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -34,8 +38,7 @@ Post.init(
         underscored: true,
         modelName: 'post'
     }
-    
-    );
-   
+
+);
+
 module.exports = Post;
-      

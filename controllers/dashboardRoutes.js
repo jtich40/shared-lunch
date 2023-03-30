@@ -9,13 +9,7 @@ router.get('/', withAuth, async (req, res) => {
             where: {
                 user_id: req.session.user_id
             },
-            attributes: ['id', 'title', 'content'],
-            include: [
-                {
-                    model: User,
-                    attributes: ['name']
-                }
-            ]
+            attributes: ['id', 'name', 'contact', 'content'],
         });
         const blogPosts = blogPostData.map((blogPost) => blogPost.get({ plain: true }));
         res.render('dashboard', {
