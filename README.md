@@ -14,21 +14,22 @@ On the Shared Lunch website, users are welcomed with a fun, yet clean looking ho
 
 ### Homepage (with example seeds):
 
-![image](https://user-images.githubusercontent.com/118077000/228907739-29e65930-4b71-47b0-a8e9-a63a7c9cc69f.png)
+![Screenshot 2023-03-30 at 4 30 49 PM](https://user-images.githubusercontent.com/110634800/228969253-7238db10-fca4-4fab-93f3-929b3a713e94.png)
+
 
 ### Login / Signup toggle:
 
-![image](https://user-images.githubusercontent.com/118077000/228907436-d20e089a-8d0b-450c-b726-4f9cc680d24c.png)
+![Screenshot 2023-03-30 at 4 29 25 PM](https://user-images.githubusercontent.com/110634800/228969287-9b70d1e9-cf5f-4953-82fa-83fa17a107d6.png)
+![Screenshot 2023-03-30 at 4 32 21 PM](https://user-images.githubusercontent.com/110634800/228969430-071263f2-98ec-4713-8464-92c1e60e47bd.png)
 
-![image](https://user-images.githubusercontent.com/118077000/228907974-0ecbf21c-165a-49c6-b25b-f99bf56525b5.png)
 
 ### Dashboard:
+![Screenshot 2023-03-30 at 4 34 29 PM](https://user-images.githubusercontent.com/110634800/228969926-bd822f32-75d8-4c11-8548-29057a2d3acc.png)
 
-![image](https://user-images.githubusercontent.com/118077000/228909496-2afb2c20-1db1-4fd5-8998-902cb0f5c63f.png)
 
 ### Adding a blog:
+![Screenshot 2023-03-30 at 4 30 35 PM](https://user-images.githubusercontent.com/110634800/228969820-15254493-8ac3-4e5a-a257-0db6ca22e3e2.png)
 
-![image](https://user-images.githubusercontent.com/118077000/228906825-d385e7eb-6311-4267-846b-34c1ac00d0a1.png)
 
 ## Licensing
 
