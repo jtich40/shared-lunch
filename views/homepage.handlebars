@@ -1,26 +1,24 @@
 <!-- homepage handlebars -->
 <div class="card-container">
-	<div class="wrapper">
-	{{#if logged_in}}
-		<h1>Welcome, {{user.name}}</h1>
-
-	{{else}}
-		<h2>Checkout the grub!</h2>
-	{{/if}}
-
-		{{#each blogPosts as |post|}}
-		<div class="card-container">
-			<div class="wrapper">
-				{{!-- title of blog --}}
-				<p>{{post.title}}</p>
-				{{!-- Food provider name --}}
-				<p>{{user.name}}<br/></p>
-				{{!-- contact info --}}
-				<p>{{post.description}}<br/></p>
-				{{!-- description --}}
-				<p>{{post.content}}<br/></p>
-			</div>
-		</div>
-		{{/each}}
-	</div>
+    <div class="wrapper">
+    {{#if logged_in}}
+        <h1>Welcome, {{user.name}}</h1>
+    {{else}}
+        <h2>Checkout the grub!</h2>
+    {{/if}}
+        {{#each blogPosts as |post|}}
+        <div class="card-container" id="card-color">
+            <div id="card-color">
+                {{!-- title of blog --}}
+                <p>{{post.title}}</p>
+                {{!-- Food provider name --}}
+                <p>{{user.name}}<br/></p>
+                {{!-- contact info --}}
+                {{!-- <p>{{post.description}}<br/></p> --}}
+                {{!-- description --}}
+                <p>{{post.content}}<br/></p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
 </div>
