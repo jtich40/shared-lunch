@@ -14,10 +14,9 @@
 	<header>
 
 		<div class="container">
-			<p class="lead">Welcome, to Shared Lunch!</p>
-			<div class="header-bar">
+			<h1 class="lead">Shared Lunch</h1>
+			<div class="header-bar justify">
 				
-				<ul class="slider-menu">
 					<nav class="display-flex justify-space-between align-center">
 						<a href="/">Home</a>
 						{{#if logged_in}}
@@ -32,11 +31,9 @@
 						<a href="/api/users/login" class"login-form">Dashboard</a>
 						{{/if}}
 					</nav>
-				</ul>
 			</div>
 		</div>
 		{{!-- <img src="/lunch box icon.png" alt="lunch box icon" class="row justify-content-center align-center"> --}}
-		<h1 class="row justify-content-center align-center">Shared Lunch</h1>
 	</header>
 	<main>
 		{{{body}}}
