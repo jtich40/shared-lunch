@@ -9,34 +9,38 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="lead">Shared Lunch</h1>
-            <div class="header-bar justify">
-                    <nav class="display-flex justify-space-between align-center">
-                        <a href="/">Home</a>
-                        {{#if logged_in}}
-                        <a href="/"id="logout">Logout</a>
-                         {{else}}
-                        <a href="/api/users/login" class="login-form">Login</a>
-                        <a href="/api/users/login" class="signup-form">Signup</a>
-                         {{/if}}
-                        {{#if logged_in}}
-                        <a href="/api/users/dashboard">Dashboard</a>
-                         {{else}}
-                        <a href="/api/users/login" class"login-form">Dashboard</a>
-                        {{/if}}
-                    </nav>
-            </div>
-        </div>
-        {{!-- <img src="/lunch box icon.png" alt="lunch box icon" class="row justify-content-center align-center"> --}}
-    </header>
-    <main>
-        {{{body}}}
-    </main>
-    <footer>
-        <p>2023 Shared Lunch. All rights reserved.</p>
-    </footer>
+	<header>
+		<div class="container">
+			<p class="lead">Welcome, to Shared Lunch!</p>
+			<div class="header-bar">
+
+				<ul class="slider-menu">
+					<nav class="display-flex justify-space-between align-center">
+						<a href="/">Home</a>
+						{{#if logged_in}}
+						<a href="/" class="logout-form">Logout</a>
+						{{else}}
+						<a href="/login" class="login-form">Login</a>
+						<a href="/login" class="signup-form">Signup</a>
+						{{/if}}
+						{{#if logged_in}}
+						<a href="/dashboard">Dashboard</a>
+						{{else}}
+						<a href="/login" class="login-form">Dashboard</a>
+						{{/if}}
+					</nav>
+				</ul>
+			</div>
+		</div>
+		{{!-- <img src="/lunch box icon.png" alt="lunch box icon" class="row justify-content-center align-center"> --}}
+		<h1 class="row justify-content-center align-center">Shared Lunch</h1>
+	</header>
+	<main>
+		{{{body}}}
+	</main>
+	<footer>
+		<p>2023 Shared Lunch. All rights reserved.</p>
+	</footer>
 	  <!-- Render script for logged in users only -->
 	{{#if logged_in}}
 	<script src="/js/logout.js"></script>
