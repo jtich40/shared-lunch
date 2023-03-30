@@ -26,7 +26,7 @@ By implementing these and other potential developments, we can improve the funct
 
 ### Homepage (with example seeds):
 
-![Screenshot 2023-03-30 at 4 30 49 PM](https://user-images.githubusercontent.com/110634800/228969253-7238db10-fca4-4fab-93f3-929b3a713e94.png)
+![screenshot_2023-03-30_at_6 05 02_pm](https://user-images.githubusercontent.com/118484592/228984578-c497f259-a6fb-4498-963e-18746d29bb57.png)
 
 
 ### Login / Signup toggle:
@@ -36,11 +36,11 @@ By implementing these and other potential developments, we can improve the funct
 
 
 ### Dashboard:
-![Screenshot 2023-03-30 at 4 34 29 PM](https://user-images.githubusercontent.com/110634800/228969926-bd822f32-75d8-4c11-8548-29057a2d3acc.png)
+![screenshot_2023-03-30_at_6 06 01_pm_720](https://user-images.githubusercontent.com/118484592/228984845-c91c6c6c-87aa-4c13-b58a-0c41a83b3d04.png)
 
 
 ### Adding a blog:
-![Screenshot 2023-03-30 at 4 30 35 PM](https://user-images.githubusercontent.com/110634800/228969820-15254493-8ac3-4e5a-a257-0db6ca22e3e2.png)
+![screenshot_2023-03-30_at_6 05 33_pm_720](https://user-images.githubusercontent.com/118484592/228984794-46754fec-c769-44a3-a0ff-af6e7ec950a8.png)
 
 
 ## Licensing
