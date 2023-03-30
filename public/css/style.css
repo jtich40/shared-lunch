@@ -63,6 +63,9 @@ nav {
   user-select: none;
   opacity: 20%;
 }
+.margin-btn {
+  margin: 40px;
+}
 img {
  max-width: 50px;
  max-height: 50px;
