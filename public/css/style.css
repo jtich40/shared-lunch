@@ -26,6 +26,7 @@ html, body {
   border-top: 10px solid #05445E;
   border-left: 10px solid #05445E;
   box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25) inset;
+  z-index: 1;
 }
 .header-bar::after {
   content: '';
@@ -43,15 +44,14 @@ a {
   display: flex;
   flex-direction: row;
   color:#05445E;
+  z-index: 2;
 }
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  margin: 0 100px 0 px;
 }
-/* nav {
-  justif
-} */
 .header-bar > .logo {
   position: absolute;
   top: calc(50% - 18px);
@@ -110,6 +110,10 @@ img {
     background-color: rgba(255,255,255,0.98);
     padding: 10px;
   border-radius: 10px;
+  }
+  #name-color {
+    font-size: 1.5rem;
+    font-weight: 520;
   }
 /* Card */
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');

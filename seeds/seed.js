@@ -31,14 +31,12 @@ sequelize.sync({ force: true })
       const post1 = {
         title: 'My First Blog Post',
         name: user.name,
-        description: `${user.name} has food to share`,
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         user_id: user.id
       };
       const post2 = {
         title: 'My Second Blog Post',
         name: user.name,
-        description: `${user.name} has food to share`,
         content: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         user_id: user.id
       };

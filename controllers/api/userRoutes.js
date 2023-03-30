@@ -56,7 +56,7 @@ router.post('/', async (req, res) => {
         const dbUserData = await User.create({
             username: req.body.username,
             password: req.body.password,
-            name: req.body.name
+            name: req.body.name,
         });
         req.session.save(() => {
             req.session.user_id = dbUserData.id;

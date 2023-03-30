@@ -3,11 +3,10 @@ const newPostHandler = async (event) => {
     const title = document.querySelector('#title').value.trim();
     const name = document.querySelector('#name').value.trim();
     const contact = document.querySelector('#contact').value.trim();
-    const content = document.querySelector('#content').value.trim();
-    if (title, name, contact, content) {
-        const response = await fetch('/dashboard/new-post', {
+    if (title, name, contact) {
+        const response = await fetch('/api/new-post', {
             method: 'POST',
-            body: JSON.stringify({ title, name, contact, content }),
+            body: JSON.stringify({ title, name, contact }),
             headers: { 'Content-Type': 'application/json' },
         });
         if (response.ok) {
