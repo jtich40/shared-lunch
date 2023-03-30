@@ -1,4 +1,211 @@
-/* Bootstrap css */
+@import url('https://fonts.googleapis.com/css?family=Parisienne%7CQuicksand&display=swap');
+html, body {
+  background-color:  #D4F1F4;
+}
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+#card-color {
+  background-color: #E2DFDF;
+}
+.lead
+ { font-family: American Typewriter, serif;
+  font-size: 72px;
+}
+.header-bar {
+  position: relative;
+  width: 75%;
+  min-width: 300px;
+  height: 50px;
+  border: 10px solid transparent;
+  border-top: 10px solid #05445E;
+  border-left: 10px solid #05445E;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25) inset;
+}
+.header-bar::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 30%;
+  height: 49px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #05445E;
+  border-right: 10px solid #05445E;
+  transition: 0.3s linear all;
+}
+a {
+  display: flex;
+  flex-direction: row;
+  color:#05445E;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+/* nav {
+  justif
+} */
+.header-bar > .logo {
+  position: absolute;
+  top: calc(50% - 18px);
+  /* left: 10px; */
+  transform: translateY(-50%);
+  color: #fffc;
+  /* font-family:Arial, Helvetica, sans-serif; */
+  cursor: default;
+  user-select: none;
+  opacity: 20%;
+}
+img {
+ max-width: 50px;
+ max-height: 50px;
+}
+.slider-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+.slider-menu > li {
+  display: inline-flex;
+  padding: 14px;
+  margin-left: 2px;
+  font-family: 'Quicksand', sans-serif;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s linear all;
+  user-select: none;
+}
+.slider-menu > li:hover {
+  color: #faa;
+  box-shadow: 0 50px 5px rgba(0, 0, 0, 0.15) inset;
+}
+.aeu-signature {
+  position: fixed;
+  top: 5px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 15px;
+  line-height: 30px;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 25px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.aeu-signature { font-family: "Quicksand"; }
+.aeu-signature > img { height: 30px; }
+.nav-style {
+    color:#000;
+    background-color: rgba(255,255,255,0.98);
+    padding: 10px;
+  border-radius: 10px;
+  }
+
+
+/* Card */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+.card-container {
+  backdrop-filter: blur(16px) saturate(100%);
+  -webkit-backdrop-filter: blur(16px) saturate(100%);
+  linear-gradient(to bottom right,  rgb(249, 248, 235), rgb(167, 215, 197), rgb(116, 180, 155), rgb(92, 141, 137));
+  border-radius: 12px;
+  padding: 5px;
+  filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  margin: 10%;
+  background-color:white;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right,  rgb(144, 207, 202), rgb(56, 233, 165), rgb(100, 167, 255), rgb(37, 135, 247));
+}
+h1{
+  font-family: 'Righteous', sans-serif;
+  color:#05445E;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+}
+h2{
+  margin-top: 50px;
+  color:#05445E;
+  font-weight:bold;
+}
+p {
+  color: #05445E;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight:1000;
+}
+ #larger-text{
+  font-size:30px;
+ }
+.button-wrapper{
+  margin-top: 18px;
+}
+.btn {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.btn + .btn {
+  margin-left: 10px;
+}
+.outline {
+  background: transparent;
+  color: rgb(249, 248, 235);
+  border: 1px solid rgb(249, 248, 235);
+  transition: all .3s ease;
+}
+.outline:hover{
+  transform: scale(1.125);
+  color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+  transition: all .3s ease;
+}
+.fill {
+  background: rgba(0, 212, 255, 0.9);
+  color: rgba(255,255,255,0.95);
+  filter: drop-shadow(0);
+  font-weight: bold;
+  transition: all .3s ease;
+}
+.fill:hover{
+  transform: scale(1.125);
+  border-color: rgba(255, 255, 255, 0.9);
+  filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
+  transition: all .3s ease;
+}
+
+
+
+
+
+10:59
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 body{
   font-family: 'Poppins', sans-serif;
@@ -7,13 +214,8 @@ body{
   line-height: 1.7;
   color: #C4C3CA;
     background-color: rgb(249, 248, 235);
-    /* background-image: url("/assets/dose-juice-sTPy-oeA3h0-unsplash.gif"); */
-/* margin: 0%; */
   overflow-x: hidden;
-    /* background-blend-mode: darken; */
-    /* background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: local; */
+      background-size: cover;
 }
 a {
   cursor: pointer;
@@ -28,11 +230,6 @@ a:hover {
 .link:hover {
   color: rgb(167, 215, 197);
 }
-p {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.7;
-}
 h4 {
     color: white;
   font-weight: 600;
@@ -41,6 +238,7 @@ h6 span{
   padding: 0 20px;
   text-transform: uppercase;
   font-weight: 700;
+  color:#05445E
 }
 img {
   resize: 100%;
@@ -53,12 +251,6 @@ align-items: center;
   max-width: auto;
   /* margin: 80%; */
 }
-/* .card {
-background-image: url("https://user-images.githubusercontent.com/118077000/228269037-31712295-5b84-41cc-88e7-1e9311412c51.png");
-} */
-/* .card-content {
-  background-repeat: no-repeat;
-} */
 .section{
   position: relative;
   width: 100%;
