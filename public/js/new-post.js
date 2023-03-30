@@ -5,7 +5,7 @@ const newPostHandler = async (event) => {
     const contact = document.querySelector('#contact').value.trim();
     const content = document.querySelector('#content').value.trim();
     if (title, name, contact, content) {
-        const response = await fetch('/dashboard', {
+        const response = await fetch('/dashboard/new-post', {
             method: 'POST',
             body: JSON.stringify({ title, name, contact, content }),
             headers: { 'Content-Type': 'application/json' },

@@ -2,45 +2,42 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 // get login page
-router.get('/login', (req, res) => {
-    // If the user is already logged in, redirect the request to another route
-    if (req.session.logged_in) {
-        res.redirect('/dashboard')
-        return
-    }
-    res.render('login');
-});
+// router.get('/login', (req, res) => {
+//     // If the user is already logged in, redirect the request to another route
+//     if (req.session.logged_in) {
+//         res.redirect('/dashboard')
+//         return
+//     }
+//     res.render('login');
+// });
 
 // send login info to server
-router.post('/login', (req, res) => {
-  const dbUserData = User.findOne({
-    where: {
-      username: req.body.username,
-    },
-  }).then((dbUserData) => {
-    // If no data exists that means the associated user does not exist at all, return error
-    if (!dbUserData) {
-      res.status(400).json({ message: 'No user Found!' });
-      return;
+router.post('/login', async (req, res) => {
+    try {
+      const userData = await User.findOne({ where: {
+        username: req.body.username }});
+      if (!userData) {
+        res
+          .status(400)
+          .json({ message: 'Incorrect username, please try again or Signup' });
+        return;
+      }
+      const validPassword = await userData.checkPassword(req.body.password);
+      if (!validPassword) {
+        res
+          .status(400)
+          .json({ message: 'Incorrect password, please try again or Signup' });
+        return;
+      }
+      req.session.save(() => {
+        req.session.user_id = userData.id;
+        req.session.logged_in = true;
+        res.redirect('/dashboard');
+      });
+    } catch (err) {
+      res.status(400).json(err);
     }
-
-    // Check the submitted password
-    const validPassword = dbUserData.checkPassword(req.body.password);
-    // If it is not valid, notify the user
-    if (!validPassword) {
-      res.status(400).json({ message: 'Incorrect password!' });
-      return;
-    }
-  });
-  // Otherwise, save the session so we can refer to these parameters and update the state of the application accordingly
-  req.session.save(() => {
-    req.session.user_id = dbUserData.id;
-    req.session.username = dbUserData.username;
-    req.session.logged_in = true;
-    res.json({ user: dbUserData, message: 'You are now logged in!' });
-  });
-});
-
+  });  
 
 // Terminate sessions and redirect to main page
 router.post('/logout', (req, res) => {
@@ -57,15 +54,15 @@ router.post('/logout', (req, res) => {
 router.post('/', async (req, res) => {
     try {
         const dbUserData = await User.create({
-            name: req.body.name,
             username: req.body.username,
-            password: req.body.password
+            password: req.body.password,
+            name: req.body.name
         });
         req.session.save(() => {
             req.session.user_id = dbUserData.id;
-            req.session.username = dbUserData.username;
+            // req.session.username = dbUserData.username;
             req.session.logged_in = true;
-            req.session.name = dbUserData.name;
+            // req.session.name = dbUserData.name;
             res.status(200).json(dbUserData);
         });
     } catch (err) {
