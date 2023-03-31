@@ -82,21 +82,19 @@ By implementing these and other potential developments, we can improve the funct
 
 ### Homepage (with example seeds):
 
-![screenshot_2023-03-30_at_6 05 02_pm](https://user-images.githubusercontent.com/118484592/228984578-c497f259-a6fb-4498-963e-18746d29bb57.png)
+![Screenshot 2023-03-30 190829](https://user-images.githubusercontent.com/116929120/228991302-84c956e8-7c88-4ccc-8a22-9243df592bda.png)
 
 
 ### Login / Signup toggle:
-
-![Screenshot 2023-03-30 at 4 29 25 PM](https://user-images.githubusercontent.com/110634800/228969287-9b70d1e9-cf5f-4953-82fa-83fa17a107d6.png)
-![Screenshot 2023-03-30 at 4 32 21 PM](https://user-images.githubusercontent.com/110634800/228969430-071263f2-98ec-4713-8464-92c1e60e47bd.png)
-
+![Login](https://user-images.githubusercontent.com/116929120/228991733-990aeeba-8779-4eaf-a220-652221d70774.png)
+![SignUp](https://user-images.githubusercontent.com/116929120/228991764-22a197bc-ec8f-4ebf-94a3-2cf3635852da.png)
 
 ### Dashboard:
-![screenshot_2023-03-30_at_6 06 01_pm_720](https://user-images.githubusercontent.com/118484592/228984845-c91c6c6c-87aa-4c13-b58a-0c41a83b3d04.png)
+![Dashboard](https://user-images.githubusercontent.com/116929120/228991815-d198bd48-0708-4058-8ea8-c795002ca73e.png)
 
 
 ### Adding a blog:
-![screenshot_2023-03-30_at_6 05 33_pm_720](https://user-images.githubusercontent.com/118484592/228984794-46754fec-c769-44a3-a0ff-af6e7ec950a8.png)
+![Screenshot 2023-03-30 191614](https://user-images.githubusercontent.com/116929120/228992069-6a671294-06ff-4b56-8e7c-e13a3c8d0a42.png)
 
 
 ## Licensing
