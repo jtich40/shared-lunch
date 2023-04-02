@@ -49,16 +49,12 @@ nav {
   flex-direction: row;
   justify-content: space-around;
 }
-/* nav {
-  justif
-} */
+
 .header-bar > .logo {
   position: absolute;
   top: calc(50% - 18px);
-  /* left: 10px; */
   transform: translateY(-50%);
   color: #fffc;
-  /* font-family:Arial, Helvetica, sans-serif; */
   cursor: default;
   user-select: none;
   opacity: 20%;
@@ -202,9 +198,6 @@ p {
 }
 
 
-
-
-
 10:59
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 body{
@@ -249,7 +242,6 @@ align-items: center;
 #img-set {
   height: auto;
   max-width: auto;
-  /* margin: 80%; */
 }
 .section{
   position: relative;
@@ -509,5 +501,3 @@ align-items: center;
   width: auto;
   display: block;
 }
-  
-  

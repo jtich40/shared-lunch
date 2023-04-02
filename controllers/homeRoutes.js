@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { Post, User } = require('../models');
-const withAuth = require('../utils/auth');
 
 //  get all posts for homepage
 router.get('/', async (req, res) => {
@@ -33,32 +32,5 @@ router.get('/login', (req, res) => {
     }
     res.render('login');
 });
-
-// get dashboard page
-// router.get('/dashboard', withAuth, async (req, res) => {
-//     try {
-//         const dbPostData = await User.findByPk(req.session.user_id, {
-//             attributes: { exclude: ['password'] },
-//             include: [{ 
-//                 model: Post,
-//                 attributes: ['name', 'contact', 'content']
-//             }],
-//             where: {
-//                 id: req.session.user_id
-//             }
-//           });
-//         const blogPosts = dbPostData.get({ plain: true })
-
-//         res.render('dashboard', {
-//             ...blogPosts,
-//             logged_in: true
-//             // username: req.session.username
-//         })
-//     }
-//     catch (err) {
-//         console.log(err)
-//         res.status(500).json(err)
-//     }
-//   })
 
 module.exports = router;
