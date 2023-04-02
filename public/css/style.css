@@ -55,10 +55,8 @@ nav {
 .header-bar > .logo {
   position: absolute;
   top: calc(50% - 18px);
-  /* left: 10px; */
   transform: translateY(-50%);
   color: #fffc;
-  /* font-family:Arial, Helvetica, sans-serif; */
   cursor: default;
   user-select: none;
   opacity: 20%;
